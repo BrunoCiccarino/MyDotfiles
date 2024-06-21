@@ -1,4 +1,4 @@
-# MyEmacs <img src="https://github.com/BrunoCiccarino/MyEmacs/blob/main/img/file.png">
+# MyEmacs <img src="https://github.com/BrunoCiccarino/MyEmacs/blob/main/img/file.png" alt="MyEmacs Logo" width="30px" height="30px"> 
 
 <h4>What is emacs?</h4>
 
