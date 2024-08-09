@@ -1,2 +1,5 @@
 ## All my dotfiles
 
+Many of you know about the vim x emacs war, I don't have that, I use both, for those who are undecided, I'm posting my configurations in both, in the future I will publish my zsh configuration too. The emacs themes I'm using are in the doom-emacs megapack, to switch between themes I wrote a hydra to make it possible (I didn't write it from scratch, I just configured it), I intend to add it to my vim configuration too, if it doesn't exist I might create one. For those who want to know which theme I use in Vim, it is my theme, which I created a little and am constantly updating, if you want to download it I will also leave the repository link. <a href="https://github.com/neko-themes/NekoVimTheme">MyTheme</a>
+
+<img src="https://github.com/neko-themes/NekoVimTheme/blob/main/img/Neko.jpg">
