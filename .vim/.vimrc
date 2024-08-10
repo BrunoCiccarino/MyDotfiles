@@ -1,3 +1,9 @@
+" Maintainer:
+"               Bruno Ciccarino
+" License:
+"               GPL-3
+
+
 " Plugins
 
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -25,12 +31,11 @@ Plugin 'tpope/vim-surround'
 Plugin 'mboughaba/i3config.vim'
 Plugin 'mattn/emmet-vim'
 Plugin 'jreybert/vimagit'
+Plugin 'dracula/vim', {'name': 'dracula'}
+
 call vundle#end()
 filetype plugin on
 filetype plugin indent on
-
-
-" Global sets
 
 
 " Global sets
@@ -60,7 +65,13 @@ filetype plugin on
 filetype indent on
 
 " Themes
-colorscheme neko
+try
+    colorscheme neko
+catch
+    colorscheme dracula
+endtry
+
+set background=dark
 
 " Vim Airline
 let g:airline_theme='violet'
@@ -137,5 +148,14 @@ function! Run(arq)
   endif
 endfunction
 noremap <C-g> :call Run(shellescape(@%, 1))<CR>
+
+" Keyboard shortcuts
+
+" Close atual buffer
+map <leader>bd :Bclose<cr>:tabclose<cr>gT
+" Open next buffer
+map <leader>l :bnext<cr>
+" Open previous buffer
+map <leader>h :bprevious<cr>
 
 
