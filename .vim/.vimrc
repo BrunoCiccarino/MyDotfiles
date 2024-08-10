@@ -6,6 +6,8 @@
 
 " Plugins
 
+source ~/.vim/plugins/gardenal.vim
+
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
@@ -37,6 +39,12 @@ call vundle#end()
 filetype plugin on
 filetype plugin indent on
 
+let themes = ['solarized', 'gruvbox', 'dracula']
+
+call MapThemeSwitcherKeys(themes)
+nnoremap <silent> 1 :call ThemeSwitcher(themes, 1)<CR>
+nnoremap <silent> 2 :call ThemeSwitcher(themes, 2)<CR>
+nnoremap <silent> 3 :call ThemeSwitcher(themes, 3)<CR>
 
 " Global sets
 syntax on
@@ -63,15 +71,6 @@ set lazyredraw
 filetype on
 filetype plugin on
 filetype indent on
-
-" Themes
-try
-    colorscheme neko
-catch
-    colorscheme dracula
-endtry
-
-set background=dark
 
 " Vim Airline
 let g:airline_theme='violet'
@@ -157,5 +156,3 @@ map <leader>bd :Bclose<cr>:tabclose<cr>gT
 map <leader>l :bnext<cr>
 " Open previous buffer
 map <leader>h :bprevious<cr>
-
-
